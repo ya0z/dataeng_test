@@ -18,6 +18,8 @@ create table sales(
 id SERIAL PRIMARY KEY,
 cust_name VARCHAR(255),
 cust_phone INTEGER,
+create_dt TIMESTAMP,
 salesperson_id INTEGER REFERENCES salesperson(id),
-car_id INTEGER REFERENCES car(id)
+car_id INTEGER REFERENCES car(id),
+CONSTRAINT fk_car_salesperson UNIQUE (salesperson_id, car_id)
 );
