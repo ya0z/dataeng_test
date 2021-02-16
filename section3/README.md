@@ -1,4 +1,4 @@
-#System Design
+![Image of System Design](https://github.com/ya0z/dataeng_test/blob/main/section3/dataeng_test_section3.jpg)
 ## Assumption
 - The image processing codes will not be supported by the new infrastructure.
 - The new infrastructure will be on Azure Cloud.
