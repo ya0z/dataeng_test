@@ -7,7 +7,7 @@ pip install pandas
 ```
 # Processing logic:
 ## Assumptions
-- The dataset will arrive in the filename *dataset.csv*
+- The dataset will arrive in the filename *dataset.csv* exactly at 1am daily.
 - The output dataset will be the filename *dataset-output.csv*
 - Salutation list can be found: [salutation list](https://www.codeproject.com/Questions/262876/Titles-or-Salutation-list), assuming the salutation is prefix of the name field.
 - Using pandas dataframe float64 datatype will automatically remove zero-padding in the price column.
@@ -21,3 +21,9 @@ pip install pandas
 - Create the *above_100* field
 - Select the fields required: first_name, last_name, price, above_100
 - Create the output csv file.
+## Cron
+Please load the cron job with the cronjob file
+```
+crontab cronjob
+```
+Everyday, the cron job will run at 1AM at the 0-minute.
