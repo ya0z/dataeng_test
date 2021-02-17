@@ -2,6 +2,7 @@
 ## Assumption
 - The image processing codes will not be supported by the new infrastructure.
 - The new infrastructure will be on Azure Cloud.
+- Files deletion do not need to be recorded.
 ## Infrastructure Design
 1. Create a resource group which house the following resources
 - Azure Function
@@ -19,3 +20,6 @@
 - Meta information e.g. customer/image info will be send to Azure Function via API calls, which will then be stored in the SQL database
 
 4. Power BI can then connect to the SQL database to generate statistics.
+
+5. Clean up files that are more than 7 days: we can use Blob Lifecycle Management by defining a policy to delete blobs if they are older than 7 days.
+Reference: [Blob Lifecycle Management!](https://docs.microsoft.com/en-us/azure/storage/blobs/storage-lifecycle-management-concepts)
